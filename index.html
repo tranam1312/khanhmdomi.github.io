@@ -3,30 +3,30 @@
 
 <head>
     <title>title</title>
-    <!-- <script>
-window.onload = function() {
-    document.querySelector("body").addEventListener("click", function(event) {
-        var anchor = event.target.closest("a");
-        if(anchor !== null) {
-            window.webkit.messageHandlers.jsMessenger.postMessage(event.target.id);
-        }
-    });
-}
-</script> -->
     <script>
-        (function () {
-            addEventListenerByTagName('a');
-            function addEventListenerByTagName(tagName) {
-                var elements = document.getElementsByTagName(tagName);
-                for (var i = 0, n = elements.length; i < n; i++) {
-                    let element = elements[i];
-                    element.addEventListener("click", function () { setPerformClick(element) });
+        window.onload = function () {
+            document.querySelector("body").addEventListener("click", function (event) {
+                var anchor = event.target.closest("a");
+                if (anchor !== null) {
+                    window.webkit.messageHandlers.jsMessenger.postMessage(event.target.id);
                 }
-            }
-            function setPerformClick(element) {
-                AndroidSBApp.performClick(element.id);
-            }
-        })()
+            });
+        }
+    </script>
+    <script>
+            (function () {
+                addEventListenerByTagName('a');
+                function addEventListenerByTagName(tagName) {
+                    var elements = document.getElementsByTagName(tagName);
+                    for (var i = 0, n = elements.length; i < n; i++) {
+                        let element = elements[i];
+                        element.addEventListener("click", function () { setPerformClick(element) });
+                    }
+                }
+                function setPerformClick(element) {
+                    AndroidSBApp.performClick(element.id);
+                }
+            })()
     </script>
 
 </head>
