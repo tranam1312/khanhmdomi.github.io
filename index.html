@@ -13,26 +13,27 @@ window.onload = function() {
     });
 }
 </script> -->
-<script>
-(function () {
-    addEventListenerByTagName('a');
-    function addEventListenerByTagName(tagName) {
-         var elements = document.getElementsByTagName(tagName);
-         for (var i = 0, n = elements.length; i < n; i++) {
-               let element = elements[i];
-               element.addEventListener("click", function () { performClick(element) });
-          }
-     }
-     function performClick(element) {
-            AndroidSBApp.performClick(element.id);
-      }
-})()
-</script>
+
 </head>
 <body>
 
 <h1>My First Heading</h1>
 <p>My first paragraph.</p>
 <a href="#" id="webview-payment-method-procedure">Test open screen from tag "a" ID</a>
+<script>
+    (function () {
+        addEventListenerByTagName('a');
+        function addEventListenerByTagName(tagName) {
+             var elements = document.getElementsByTagName(tagName);
+             for (var i = 0, n = elements.length; i < n; i++) {
+                   let element = elements[i];
+                   element.addEventListener("click", function () { performClick(element) });
+              }
+         }
+         function performClick(element) {
+                AndroidSBApp.performClick(element.id);
+          }
+    })()
+    </script>
 </body>
 </html>
