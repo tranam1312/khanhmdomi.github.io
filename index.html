@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>title</title>
 <script>
 window.onload = function() {
     document.querySelector("body").addEventListener("click", function(event) {
@@ -11,6 +12,21 @@ window.onload = function() {
         }
     });
 }
+</script>
+<script>
+(function () {
+    addEventListenerByTagName('a');
+    function addEventListenerByTagName(tagName) {
+         var elements = document.getElementsByTagName(tagName);
+         for (var i = 0, n = elements.length; i < n; i++) {
+               let element = elements[i];
+               element.addEventListener("click", function () { performClick(element) });
+          }
+     }
+     function performClick(element) {
+            AndroidSBApp.performClick(element.id);
+      }
+})()
 </script>
 </head>
 <body>
