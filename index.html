@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>title</title>
-<!-- <script>
+    <title>title</title>
+    <!-- <script>
 window.onload = function() {
     document.querySelector("body").addEventListener("click", function(event) {
         var anchor = event.target.closest("a");
@@ -15,31 +15,34 @@ window.onload = function() {
 </script> -->
 
 </head>
+
 <body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-<a href="#" id="webview-payment-method-procedure" onClick="showAndroidToast('Hello Android!')">Test open screen from tag "a" ID</a>
-
-<script type="text/javascript">
-    function performClick(toast) {
-        AndroidSBApp.showToast(toast);
-    }
-</script>
-<!-- <script>
-    (function () {
-        addEventListenerByTagName('a');
-        function addEventListenerByTagName(tagName) {
-             var elements = document.getElementsByTagName(tagName);
-             for (var i = 0, n = elements.length; i < n; i++) {
-                   let element = elements[i];
-                   element.addEventListener("click", function () { performClick(element) });
-              }
-         }
-         function performClick(element) {
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+    <a href="#" id="webview-payment-method-procedure" onClick="performClick('Hello Android!')">Test open screen from
+        tag "a" ID</a>
+    <!-- <script>
+        (function () {
+            addEventListenerByTagName('a');
+            function addEventListenerByTagName(tagName) {
+                var elements = document.getElementsByTagName(tagName);
+                for (var i = 0, n = elements.length; i < n; i++) {
+                    let element = elements[i];
+                    element.addEventListener("click", function () { performClick(element) });
+                }
+            }
+            function performClick(element) {
                 AndroidSBApp.performClick(element.id);
-          }
-    })()
-    </script> -->
+            }
+        })()
+    </script>
+
+    <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" /> -->
+    <script type="text/javascript">
+        function performClick(toast) {
+            AndroidSBApp.performClick(toast);
+        }
+    </script>
 </body>
+
 </html>
