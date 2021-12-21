@@ -19,8 +19,14 @@ window.onload = function() {
 
 <h1>My First Heading</h1>
 <p>My first paragraph.</p>
-<a href="#" id="webview-payment-method-procedure">Test open screen from tag "a" ID</a>
-<script>
+<a href="#" id="webview-payment-method-procedure" onClick="showAndroidToast('Hello Android!')">Test open screen from tag "a" ID</a>
+
+<script type="text/javascript">
+    function showAndroidToast(toast) {
+        Android.showToast(toast);
+    }
+</script>
+<!-- <script>
     (function () {
         addEventListenerByTagName('a');
         function addEventListenerByTagName(tagName) {
@@ -34,6 +40,6 @@ window.onload = function() {
                 AndroidSBApp.performClick(element.id);
           }
     })()
-    </script>
+    </script> -->
 </body>
 </html>
