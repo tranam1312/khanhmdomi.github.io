@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+window.onload = function() {
+    document.querySelector("body").addEventListener("click", function(event) {
+        var anchor = event.target.closest("a");
+        if(anchor !== null) {
+            window.webkit.messageHandlers.jsMessenger.postMessage(event.target.id);
+        }
+    });
+}
+</script>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+<a href="#" id="webview-payment-method-procedure">Test open screen from tag "a" ID</a>
+</body>
+</html>
