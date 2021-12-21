@@ -13,14 +13,6 @@ window.onload = function() {
     });
 }
 </script> -->
-
-</head>
-
-<body>
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
-    <!-- <a href="#" id="webview-payment-method-procedure" onClick="performClick('Hello Android!')">Test open screen from
-        tag "a" ID</a>
     <script>
         (function () {
             addEventListenerByTagName('a');
@@ -28,15 +20,23 @@ window.onload = function() {
                 var elements = document.getElementsByTagName(tagName);
                 for (var i = 0, n = elements.length; i < n; i++) {
                     let element = elements[i];
-                    element.addEventListener("click", function () { performClick(element) });
+                    element.addEventListener("click", function () { setPerformClick(element) });
                 }
             }
-            function performClick(element) {
+            function setPerformClick(element) {
                 AndroidSBApp.performClick(element.id);
             }
         })()
     </script>
-    <BR> -->
+
+</head>
+
+<body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+    <a href="#" id="webview-payment-method-procedure" onClick="performClick('Hello Android!')">Test open screen from tag
+        "a" ID</a>
+    <BR>
     <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
     <script type="text/javascript">
         function showAndroidToast(toast) {
