@@ -21,7 +21,7 @@ window.onload = function() {
     <p>My first paragraph.</p>
     <a href="#" id="webview-payment-method-procedure" onClick="performClick('Hello Android!')">Test open screen from
         tag "a" ID</a>
-    <!-- <script>
+    <script>
         (function () {
             addEventListenerByTagName('a');
             function addEventListenerByTagName(tagName) {
@@ -37,10 +37,10 @@ window.onload = function() {
         })()
     </script>
 
-    <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" /> -->
+    <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
     <script type="text/javascript">
-        function performClick(toast) {
-            AndroidSBApp.performClick(toast);
+        function showAndroidToast(toast) {
+            AndroidSBApp.showAndroidToast(toast);
         }
     </script>
 </body>
