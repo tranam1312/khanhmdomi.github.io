@@ -38,10 +38,10 @@
     <a href="#" id="webview-payment-method-procedure" onClick="performClick('Hello Android!')">Test open screen from tag
         "a" ID</a>
     <BR>
-    <input type="button" value="Say hello" onClick="showAndroidToast()" />
+    <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
     <script type="text/javascript">
-        function showAndroidToast() {
-            AndroidSBApp.showToast();
+        function showAndroidToast(toast) {
+            AndroidSBApp.showToast(toast);
         }
     </script>
 </body>
