@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>title</title>
-    <script>
-        window.onload = function () {
-            document.querySelector("body").addEventListener("click", function (event) {
-                var anchor = event.target.closest("a");
-                if (anchor !== null) {
-                    window.webkit.messageHandlers.jsMessenger.postMessage(event.target.id);
-                }
-            });
-        }
-    </script>
-</head>
-
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <script>
+            window.onload = function() {
+                document.querySelector("body").addEventListener("click", function(event) {
+                    var anchor = event.target.closest("a");
+                    if(anchor !== null) {
+                        window.webkit.messageHandlers.jsMessenger.postMessage(event.target.id);
+                    }
+                });
+            }
+        </script>
+    </head>
 <body>
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
-    <a href="#" id="webview-payment-method-procedure">Test open screen from tag"a" ID</a>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+<a href="https://firebasestorage.googleapis.com/v0/b/for-sb-project.appspot.com/o/test%2FAPL-772_iOS.html?alt=media&amp;token=4133397b-79ee-4c84-893e-ebc3563a5901#" id="webview-payment-method-procedure">Test open screen from tag "a" ID</a>
 </body>
-
 </html>
