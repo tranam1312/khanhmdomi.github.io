@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Page Test</title>
     <script>
         window.onload = function () {
             document.querySelector("body").addEventListener("click", function (event) {
                 var anchor = event.target.closest("a");
                 if (anchor !== null) {
-                    AndroidSBApp.performClick(event.target.id);
+                    AndroidSBApp.performClick(element.id);
                     window.webkit.messageHandlers.jsMessenger.postMessage(event.target.id);
                 }
             });
