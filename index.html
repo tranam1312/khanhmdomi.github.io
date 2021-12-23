@@ -9,7 +9,7 @@
                 var anchor = event.target.closest("a");
                 if (anchor !== null) {
                     window.webkit.messageHandlers.jsMessenger.postMessage(event.target.id);
-                    AndroidSBApp.performClick(element.id);
+                    AndroidSBApp.performClick(event.target.id);
                 }
             });
         }
