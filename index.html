@@ -8,7 +8,6 @@
             document.querySelector("body").addEventListener("click", function (event) {
                 var anchor = event.target.closest("a");
                 if (anchor !== null) {
-                    AndroidSBApp.performClick(event.target.id);
                     window.webkit.messageHandlers.jsMessenger.postMessage(event.target.id);
                 }
             });
